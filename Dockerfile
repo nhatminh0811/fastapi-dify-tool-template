@@ -3,8 +3,13 @@ RUN apt-get update && apt-get install -y \
   gcc \
   && rm -rf /var/lib/apt/lists/*
 
+RUN pip install fpdf
 
 RUN pip install poetry==1.8.2
+RUN pip install pymupdf
+RUN pip install markdown
+RUN pip install transformers sentencepiece
+RUN pip install torch torchvision torchaudio
 
 # Configuring poetry
 RUN poetry config virtualenvs.create false

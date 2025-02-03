@@ -1,0 +1,41 @@
+  - RAG
+  - RAG
+  - RAG
+  - RAG
+  - RAG
+  - RAG
+  - RAG
+  - RAG
+  - RAG
+  - RAG
+  - MORPH SHAPE
+  - MORPH SHAPE
+  - MORPH SHAPE
+  - MORPH SHAPE
+  - MORPH SHAPE
+  - INTRODUCTION
+  - RAG
+  - INTRODUCTION
+  - Our Company
+  - Truy xuất thông tin nhanh và hiệu quả
+  - Đáp ứng linh hoạt, phù hợp ngữ cảnh
+  - Giảm thiểu thông tin không chính xác bằng cách kết hợp dữ liệu truy xuất
+  - Ưu điểm
+  - OUR PROJECTS
+  - Nhược điểm
+  - Phụ thuộc vào chất lượng dữ liệu nguồn
+  - Yêu cầu tài nguyên tính toán lớn
+  - Phức tạp trong triển khai so với mô hình chỉ dựa trên sinh văn bản
+  - RAG PIPELINE
+  - Our Company
+  - Gallery
+  - MORPH SHAPE
+  - MORPH SHAPE
+  - MORPH SHAPE
+  - MORPH SHAPE
+  - RAG Pipeline
+  - OUR PROJECTS
+  - Gallery
+  - Dify AI
+  - OUR PROJECTS
+  - Thank you

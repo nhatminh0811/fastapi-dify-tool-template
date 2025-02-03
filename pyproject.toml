@@ -2,12 +2,8 @@
 name = "app"
 version = "0.1.0"
 description = ""
-authors = [
-
-]
-maintainers = [
-
-]
+authors = []
+maintainers = []
 readme = "README.md"
 
 [tool.poetry.dependencies]
@@ -15,16 +11,26 @@ python = "^3.9"
 fastapi = "^0.111.0"
 uvicorn = { version = "^0.30.1", extras = ["standard"] }
 gunicorn = "^22.0.0"
-pydantic = "^2"
-pydantic-settings = "^2"
+pydantic = ">=2,<3"
+pydantic-settings = ">=2,<3"
 yarl = "^1"
 ujson = "^5.10.0"
-SQLAlchemy = {version = "^2.0.31", extras = ["asyncio"]}
-asyncpg = {version = "^0.29.0", extras = ["sa"]}
+SQLAlchemy = { version = "^2.0.31", extras = ["asyncio"] }
+asyncpg = "^0.29.0"
 httptools = "^0.6.1"
 pymongo = "^4.8.0"
 loguru = "^0"
-
+langchain = "^0.3.13"
+langchain_community = "^0.3.13"
+langchain_core = "^0.3.28"
+langchain_google_genai = "^2.0.7"
+python-docx = "^1.1.2"
+python-pptx = "^1.0.2"
+pypdf = "^5.1.0"
+xmind = " * "  
+reportlab = " * "
+xmindparser =" * "
+PyPDF2 = " * "
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8"
@@ -40,7 +46,7 @@ httpx = "^0.27.0"
 [tool.isort]
 profile = "black"
 multi_line_output = 3
-src_paths = ["app",]
+src_paths = ["app"]
 
 [tool.mypy]
 strict = true
@@ -67,50 +73,14 @@ env = [
 ]
 
 [tool.ruff]
-# List of enabled rulsets.
-# See https://docs.astral.sh/ruff/rules/ for more information.
 lint.select = [
-    "E",   # Error
-    "F",   # Pyflakes
-    "W",   # Pycodestyle
-    "C90", # McCabe complexity
-    "I",   # Isort
-    "N",   # pep8-naming
-    "D",   # Pydocstyle
-    "ANN", # Pytype annotations
-    "S",   # Bandit
-    "B",   # Bugbear
-    "COM", # Commas
-    "C4",  # Comprehensions
-    "ISC", # Implicit string concat
-    "PIE", # Unnecessary code
-    "T20", # Catch prints
-    "PYI", # validate pyi files
-    "Q",   # Checks for quotes
-    "RSE", # Checks raise statements
-    "RET", # Checks return statements
-    "SLF", # Self checks
-    "SIM", # Simplificator
-    "PTH", # Pathlib checks
-    "ERA", # Checks for commented out code
-    "PL",  # PyLint checks
-    "RUF", # Specific to Ruff checks
+    "E", "F", "W", "C90", "I", "N", "D", "ANN", "S", "B", "COM", "C4",
+    "ISC", "PIE", "T20", "PYI", "Q", "RSE", "RET", "SLF", "SIM", "PTH",
+    "ERA", "PL", "RUF"
 ]
 lint.ignore = [
-    "D105",    # Missing docstring in magic method
-    "D107",    # Missing docstring in __init__
-    "B008",    # Do not perform function calls in argument defaults
-    "D211",    # No blank lines allowed before class docstring
-    "D212",    # Multi-line docstring summary should start at the first line
-    "D401",    # First line should be in imperative mood
-    "D104",    # Missing docstring in public package
-    "D100",    # Missing docstring in public module
-    "D202",    # No blank lines allowed after function docstring
-    "ANN102",  # Missing type annotation for self in method
-    "ANN101",  # Missing type annotation for argument
-    "ANN401",  # typing.Any are disallowed in `**kwargs
-    "PLR0913", # Too many arguments for function call
-    "D106",    # Missing docstring in public nested class
+    "D105", "D107", "B008", "D211", "D212", "D401", "D104", "D100",
+    "D202", "ANN102", "ANN101", "ANN401", "PLR0913", "D106"
 ]
 exclude = [
     "app/db/migrations",
@@ -120,9 +90,7 @@ lint.mccabe = { max-complexity = 10 }
 line-length = 88
 
 [tool.ruff.lint.per-file-ignores]
-"tests/*" = [
-    "S101", # Use of assert detected
-]
+"tests/*" = ["S101"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "pep257"
@@ -130,7 +98,6 @@ ignore-decorators = ["typing.overload"]
 
 [tool.ruff.lint.pylint]
 allow-magic-value-types = ["int", "str", "float", "bytes"]
-
 
 [fastapi-template.options]
 project_name = "app"
